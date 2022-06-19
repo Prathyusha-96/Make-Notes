@@ -1,7 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './navbar.css';
-export const Navbar = () => {
+import { useAuth } from "../../contexts";
+ const Navbar = () => {
+    const { auth, setAuth } = useAuth();
+    const redirect = useNavigate();
+    const signOutFunc = (setAuth) => {
+        localStorage.removeItem("AUTH_TOKEN");
+        localStorage.removeItem("username");
+        setAuth(() => ({
+          isAuth: false,
+          token: null,
+          user: "",
+        }));
+        redirect("/login");
+      };
     return(
    <nav>
     <div className="left-nav">
@@ -20,16 +33,26 @@ export const Navbar = () => {
  </Link>
  </li>
  <li>
-    <Link  to="/" className="text">
+    <Link  to="/addnote" className="text">
     Add Note
  </Link>
  </li>
+       {auth.isAuth === true ? (
         <li>
-    <Link  to="/Login" className="btn btn-primary">
+        <Link to="/login" className="btn btn-primary"
+        onClick={() => signOutFunc(setAuth)}>
+            Logout
+        </Link>
+        </li>
+      ) : (
+        <li>
+    <Link  to="/login" className="btn btn-primary">
     Login
  </Link>
  </li>
+ )}
 </ul>
 </nav>
     );
 }
+export { Navbar }

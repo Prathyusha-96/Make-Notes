@@ -9,12 +9,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
+  min-height: 80vh;
+  padding: 0 1rem 4rem;
 }
-
 .login-form {
-  width: 25rem;
-  height: 25rem;
+  width: 28rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+  border-radius: 5px;
+}
+.signup-form {
+  width: 30rem;
+  height: 35rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -24,23 +33,21 @@ body {
 .heading {
   margin-bottom: 2rem;
   font-size: 2rem;
-  padding: 2rem 2rem 0 2rem;
+  padding:  0 2rem;
 }
 .text-center {
   text-align: center;
 }
 .input {
   color: var(--black-color);
-  font-size: 0.9rem;
-  line-height: 1.2px;
+  font-size: 0.95rem;
   margin: 0 1.1rem 0.8rem;
   width: 80%;
 }
 label {
   display: block;
-  margin-bottom: 2px;
+  /* margin-bottom: 1rem; */
 }
-
 .input-txt {
   background: var(--text-color);
   border: 1px solid var(--black-color);
@@ -56,16 +63,17 @@ label {
 input[type=password] {
   border: 1px solid var(--black-color);
 }
- .input-checkbox {
+ .input-checkbox  {
   border: var(--black-color);
 } 
+
 .login-forget {
   float: right;
   color: var(--black-color);
 }
 .btn {
   font-weight: 600;
-  min-width: 150px;
+  min-width: 80%;
   width: max-content;
   cursor: pointer;
   padding: 0.8rem;
