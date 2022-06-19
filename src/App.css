@@ -1,4 +1,27 @@
-.App {
+.App, 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 200px);
+
+}
+:root {
+  --main-color: #db2777;
+  --secondary-color: #d1d5db;
+  --black-color: #1f2937;
+  --active-color: #2563eb;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+} 
+
+
+/* .App {
   text-align: center;
 }
 
@@ -48,4 +71,4 @@
   color: #d9d9d9;
   font-size: 1.2rem;
   margin: 1rem;
-}
+} */
