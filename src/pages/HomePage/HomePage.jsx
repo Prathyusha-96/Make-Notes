@@ -18,13 +18,11 @@ const HomePage = () => {
            Storing the data of your thoughts/ reminders in a place where we can access digitally
             through Make- Notes
           </div>
-          <div className="note-btn">
-        <Link to="/" >
-              <button className="btn btn-primary">
+        <Link to="/addnote" >
+              <button className="btn note-btn btn-primary">
                 Start Taking Notes
               </button>
             </Link>
-            </div>
             </div>
         </div>
        
