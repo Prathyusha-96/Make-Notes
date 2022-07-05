@@ -3,7 +3,7 @@ import MockmanEs from "mockman-js";
 import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components";
 import { Footer } from "./components";
-import { HomePage, Login, Signup } from "./pages";
+import { HomePage, Login, Signup, NotePage } from "./pages";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<HomePage />}  />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/addnote" element={<NotePage />} />
       <Route path="/mock" element={<MockmanEs  />} />
       </Routes>
       <Footer/>
