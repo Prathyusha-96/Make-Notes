@@ -1,22 +1,23 @@
 import { useState, createContext, useContext, useReducer } from "react";
-import { notesReducer } from "../reducers";
+import { useAuth } from "./auth-context";
+import { NotesReducer } from "../reducers";
 
 const NotesContext = createContext();
-
-
 const NotesProvider = ({ children }) => {
   const [note, setNote] = useState({
     title: "",
     content: "",
   });
-  const [noteState, noteDispatch] = useReducer(notesReducer, {
+  const [noteState, noteDispatch] = useReducer(NotesReducer, {
     notes: [],
-    
+    showModal: false,
+    noteToEdit: {},
+    notesTrash: [],
+    notesArchive: [],
 });
-  const { notes } = noteState
 
   return (
-    <NotesContext.Provider value={{ note, notes, setNote, noteState, noteDispatch }}>
+    <NotesContext.Provider value={{ note, setNote, noteState, noteDispatch }}>
       {children}
     </NotesContext.Provider>
   );

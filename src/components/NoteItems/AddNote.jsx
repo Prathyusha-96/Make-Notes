@@ -2,7 +2,6 @@ import { addNotes } from "../../utilities";
 import { useNote } from "../../contexts";
 
 import "./add-note.css";
-
 const AddNote = () => {
     const emptyNote = {
         title: "",
@@ -10,6 +9,7 @@ const AddNote = () => {
     };
     
     const { note,setNote, noteDispatch } = useNote();
+
     const addNoteHandler = (e) => {
         e.preventDefault();
         if(!(note.title === "" && note.content === "")) {
@@ -21,36 +21,31 @@ const AddNote = () => {
     }
 
 return (
-  <>
   <main className="main-container">
-    <form className="note"
-    onSubmit={(e) => addNoteHandler(e)}>
-        <div className="notes">
+   <form className="note"
+      onSubmit={(e) => addNoteHandler(e)}>
+      <div className="notes">
      <input
         placeholder="Add title"
         className="note-heading"
         value={note.title}
-        onChange={(e) => setNote({ ...note, 
-          title: e.target.value })}
+        onChange={(e) => setNote({ ...note, title: e.target.value })}
       />
-      <span className='note-pinned'>
-      <i className='fas fa-thumbtack'></i>
+      <span className="note-pinned">
+      <i className="fas fa-thumbtack"></i>
       </span>
       </div>
       <textarea
         className="note-content"
-        name="content"
-        placeholder="Enter a notes..."
+        placeholder="Enter note..."
         value={note.content}
         onChange={(e) => setNote({ ...note, content: e.target.value })}
       ></textarea>
       <div className="footer">
-      <button  type="submit"
-      className='add-note'>
-          Add
+      <button type="submit" className="add-note">
+          Save Note
           </button>
           <span className='note-button'>
-                <i className='note-delete fas fa-trash'></i>
                 <input
                   value={note.backgroundColor}
                   className='note-color'
@@ -64,10 +59,11 @@ return (
                 />
               </span> 
       </div>
-    </form>
+      </form>
+   </main>
     
-    </main>
-    </>
+   
+   
   );
 };
 

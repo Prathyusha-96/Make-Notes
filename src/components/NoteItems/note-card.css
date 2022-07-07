@@ -2,20 +2,36 @@
   padding: 1rem 0;
   box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
   border: 1px solid rgba(95, 99, 104, .8);
+  border-radius: 0.5rem;
+  margin: 1rem;
 }
-
 .card {
-  height: auto;
   height: min-content;
-  margin: 1rem 0;
+  margin: 1rem;
 }
 .card-content {
-  font-size: 1.2rem;
-}
-
-.card-heading {
   font-size: 1rem;
+  margin: 1rem;
+}
+.card-heading {
+  margin: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
+}
+.card-place {
+  margin: 1rem;
+}
+.note-pinned {
+  float: right;
+  cursor: pointer;
+  padding-top: 1rem;
+ }
+.footer-icon {
+  margin: 1rem;
+}
+.icons-display {
+  margin: 0.5rem;
+  font-size: 1.5rem;
 }
 
  

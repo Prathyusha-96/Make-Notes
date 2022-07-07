@@ -8,7 +8,7 @@ const Sidebar = () => {
     <ul className="sidebar-heading">
       <li className="sidebar-link">
       <Link 
-      to="/note"
+      to="/addnote"
       className="menu-link">
         <i className="fas fa-book"></i> Notes
         </Link>
@@ -17,14 +17,14 @@ const Sidebar = () => {
       <Link 
       to="/label"
       className="menu-link">
-      <i class="fas fa-tag"></i> Label 
+      <i className="fas fa-tag"></i> Label 
       </Link>
       </li>
       <li className="sidebar-link">
       <Link 
       to="/archive"
       className="menu-link">
-         <i class="fas fa-archive"></i> Archive
+         <i className="fas fa-archive"></i> Archive
       </Link>
       </li>
       <li className="sidebar-link">
