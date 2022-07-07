@@ -1,17 +1,18 @@
 import React from "react"
 import { useNote } from "../../contexts";
-import { Sidebar, NoteCard, AddNote } from "../../components";
+import { Sidebar, NoteCard, AddNote, Modal } from "../../components";
 import "./note-page.css";
 
 const NotePage = () => {
     const {
-      noteState: { notes },
+      noteState: { notes, showModal },
       }  = useNote();
   return (
     <>
   <main className="note-container">
     <Sidebar />
-     <div className="notes-editor-container">
+    
+     <section className="notes-editor-container">
         <AddNote />
           <section className="notes-display">
           {notes.length > 0 ? (
@@ -20,7 +21,10 @@ const NotePage = () => {
               <h3 className="h3">Saved Notes appear here</h3>
             )}
           </section>
-        </div>
+          </section>
+
+        {showModal && <Modal />}
+        
     
     </main>
     </>
