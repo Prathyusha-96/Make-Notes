@@ -11,9 +11,9 @@ const TrashPage = () => {
   const { pathname } = useLocation();
   return (
     <>
-    <main className="note-container">
+    <div className="grid-col-2">
      <Sidebar />
-    <div className="notes-editor-container">
+    <div className="grid-col-item flex-col">
           <h1 className="h1">Trashed Notes </h1>
           <section className="notes-display">
             {notesTrash.length > 0 ? (
@@ -23,7 +23,7 @@ const TrashPage = () => {
             )}
           </section>
       </div>
-    </main>
+    </div>
     </>
   );
 };

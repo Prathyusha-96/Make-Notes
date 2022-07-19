@@ -11,10 +11,9 @@ const ArchivePage = () => {
 const { pathname } = useLocation();
 return (
     <>
-  <main className="note-container">
-    
-      <Sidebar />
-<div className="notes-editor-container">
+  <div className="grid-col-2">
+    <Sidebar />
+<div className="grid-col-item flex-col">
         <h1 className="h1">Archived Notes</h1>
         <section className="notes-display">
           {notesArchive.length > 0 ? (
@@ -24,7 +23,7 @@ return (
           )}
         </section>
     </div>
-  </main>
+  </div>
   </>
 );
 };

@@ -1,25 +1,10 @@
 .App, 
 .page-container {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   min-height: calc(100vh-200vh);
-
-
-}
-:root {
-  --main-color: #db2777;
-  --secondary-color: #d1d5db;
-  --black-color: #1f2937;
-  --active-color: #2563eb;
-}
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--secondary-color);
-} 
+  line-height: 1.5;
+  
+  }
 
 
 

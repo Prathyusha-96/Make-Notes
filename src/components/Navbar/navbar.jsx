@@ -2,9 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './navbar.css';
-import { useAuth } from "../../contexts";
+import { useAuth, useNote } from "../../contexts";
  const Navbar = () => {
     const { auth, setAuth } = useAuth();
+    const { noteState, noteDispatch} = useNote();
+
     const redirect = useNavigate();
     const signOutFunc = (setAuth) => {
         localStorage.removeItem("AUTH_TOKEN");
@@ -12,8 +14,9 @@ import { useAuth } from "../../contexts";
         setAuth(() => ({
           isAuth: false,
           token: null,
-          user: "",
+          user: {},
         }));
+        noteDispatch({ type: "RESET_NOTES"})
         redirect("/login");
       };
 
@@ -43,18 +46,20 @@ import { useAuth } from "../../contexts";
     Home
  </Link>
  </li>
- <li>
+   {auth.isAuth === true ? (
+    <>
+    <li>
     <Link  to="/addnote" className="text">
     Add Note
  </Link>
  </li>
-       {auth.isAuth === true ? (
         <li>
         <Link to="/login" className="btn btn-primary"
         onClick={() => signOutFunc(setAuth)}>
             Logout
         </Link>
         </li>
+        </>
       ) : (
         <li>
     <Link  to="/login" className="btn btn-primary">
