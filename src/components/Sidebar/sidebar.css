@@ -1,11 +1,10 @@
 .sidebar {
   width: 12rem;
-  margin: 0; 
   height: 100vh;
   position: sticky;
-  flex: 0 0 180px;
   margin-right: 1rem;
-  transition: all .5s ease-out;
+  top: 0;
+  left: 0;
   border-right: 1px solid var(--black-color);
  
 }
@@ -26,19 +25,22 @@
   color: var(--black-color);
   font-size: 1.1rem;
 }
-
-
 .menu-link:hover {
   color: var(--main-color);
 }
-
+.label-nav-item {
+  margin: 1rem;
+}
+.create-label-row input{
+  width: 5rem;
+  padding: 0.2rem;
+ }
 
 @media screen and (max-width:750px) {
   .sidebar {
       display: none;
   }
-
-  .sidebar-link {
+.sidebar-link {
       font-size: 1.2rem;
   }
 }
