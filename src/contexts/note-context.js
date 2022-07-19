@@ -1,8 +1,8 @@
-import { useState, createContext, useContext, useReducer } from "react";
-import { useAuth } from "./auth-context";
+import { useState,  createContext, useContext, useReducer } from "react";
 import { NotesReducer } from "../reducers";
 
 const NotesContext = createContext();
+
 const NotesProvider = ({ children }) => {
   const [note, setNote] = useState({
     title: "",
@@ -14,6 +14,10 @@ const NotesProvider = ({ children }) => {
     noteToEdit: {},
     notesTrash: [],
     notesArchive: [],
+    pickColor: false,
+    pickColorModal: false,
+    labels: ["no-label", "study","work"],
+    sortByDateTime: "",
 });
 
   return (

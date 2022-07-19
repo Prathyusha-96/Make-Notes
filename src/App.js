@@ -1,4 +1,5 @@
 import "./App.css";
+import "./styles/main.css";
 import MockmanEs from "mockman-js";
 import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components";
