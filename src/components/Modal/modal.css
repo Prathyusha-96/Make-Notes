@@ -7,22 +7,11 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 5;
+    z-index: 2;
     position: fixed;
     justify-content: center;
     align-items: center;
   }
-
-.editnote-text-container input,
-.editnote-text-container textarea  {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    height: fit-content;
-    overflow: scroll;
-    width: 100%;
-}
   .add-note-title,
   .add-note-content {
     padding: 1rem;
@@ -35,17 +24,28 @@
     color: var(--black-color);
     resize: none;
   }
+  .editnote-text-container input,
+ .editnote-text-container textarea  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: fit-content;
+    overflow: scroll;
+    width: 100%;
+}
   .editnote-container {
       background-color: #fbcfe8;
       width: 40%;
-     border: 1px solid rgba(95, 99, 104, .8);
+      border: 1px solid rgba(95, 99, 104, .8);
       box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
       border-radius: 0.5em;
-      
-  }
-  .footer {
-    display: flex;
-  }
+}
+ .footer {
+  display: flex;
+  margin-top: 2rem;
+}
+  
   .edit-note {
     padding: 0.5rem 1rem ;
     margin-bottom: 1rem;
@@ -57,6 +57,10 @@
     border-radius: 0.2rem;
     cursor: pointer;
   } 
-  
-  
+  .select-label {
+    margin-top: 0.5rem;
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+  } 
+
   

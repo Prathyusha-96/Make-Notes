@@ -1,14 +1,9 @@
-.main-container {
-  width: 100%;
-}
-.note {
+.add-note-container {
+  position: fixed;
   width: 35rem;
-  height: 35vh;
   border: 1px solid rgba(95, 99, 104, .8);
   box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
-  margin: 1rem;
   border-radius: 0.5em;
-  padding: 0.1em;
 }
 .notes {
   display: flex;
@@ -27,41 +22,35 @@
   resize: none;
   overflow: hidden;
 }
-
 .note-pinned {
   float: right;
   cursor: pointer;
   padding-top: .8rem;
   margin-right: 1rem;
-
 }
-
 .footer {
   display: flex;
+  margin-top: 2rem;
 }
-
 .note-button {
   float: right;
   padding: 0 1rem;
 }
-
-.note-delete {
-  font-size: 1.2rem;
-}
-
-.note-color {
-  margin-left: 1rem;
-}
-
 .add-note {
-  padding: 0.5rem 1.2rem ;
-  margin-left: 1rem;
+  padding:  0.5rem 1rem;
+  margin: 0.5rem;
   background-color: var(--main-color);
   color: aliceblue;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border: none;
   border-radius: 0.2rem;
   cursor: pointer;
+} 
+  
+.select-label {
+  margin-top: 0.5rem;
+  border: 2px solid var(--black-color);
+  border-radius: 3px;
 } 
 
 

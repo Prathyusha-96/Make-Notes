@@ -1,14 +1,14 @@
- .card-note {
-  padding: 1rem 0;
-  box-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+.card-note {
+  padding: 0;
+  box-shadow: 0 3px 5px #00000033;
   border: 1px solid rgba(95, 99, 104, .8);
   border-radius: 0.5rem;
-  margin: 1rem;
 }
 .card {
-  height: min-content;
-  margin: 1rem;
+  height: auto;
+  margin: 0.5rem;
 }
+
 .card-content {
   font-size: 1rem;
   margin: 1rem;
@@ -21,17 +21,19 @@
 .card-place {
   margin: 1rem;
 }
+.note-label {
+  margin: 1rem;
+}
 .note-pinned {
   float: right;
   cursor: pointer;
-  padding-top: 1rem;
  }
 .footer-icon {
   margin: 1rem;
 }
 .icons-display {
   margin: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
  
