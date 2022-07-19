@@ -55,3 +55,7 @@ nav {
 .right-nav .text:hover {
     color: var(--main-color);
 }
+.dark-mode {
+    background-color: var(--black-color);
+    color: #3f3f46;
+  }

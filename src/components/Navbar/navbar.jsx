@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import './navbar.css';
 import { useAuth, useNote } from "../../contexts";
@@ -18,6 +19,17 @@ import { useAuth, useNote } from "../../contexts";
         noteDispatch({ type: "RESET_NOTES"})
         redirect("/login");
       };
+
+      const themeFromLocal = JSON.parse(localStorage.getItem("darkMode"));
+
+  const [darkMode, setDarkMode] = useState(themeFromLocal || false);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+    darkMode
+      ? document.body.classList.add("dark-mode")
+      : document.body.classList.remove("dark-mode");
+  }, [darkMode]);
     return(
    <nav>
     <div className="left-nav">
@@ -56,6 +68,16 @@ import { useAuth, useNote } from "../../contexts";
  </Link>
  </li>
  )}
+ <li>
+ {darkMode ? (
+            <i className="fas fa-sun" onClick={() => setDarkMode(false)}></i>
+          ) : (
+            <i
+              className="fas fa-moon cursor-pointer"
+              onClick={() => setDarkMode(true)}
+            ></i>
+          )}
+          </li>
 </ul>
 </nav>
     );
